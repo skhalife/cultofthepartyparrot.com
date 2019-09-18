@@ -19,10 +19,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
       run: |
-        npm install imagemin
+        npm install imagemin@"^6.0.0"
         npm install uglify-js@"^3.6.0"
         npm install uglifycss@"^0.0.29"
-        npm install gifsicle@"^6.0.1"
+        npm install imagemin-jpegtran
+        npm install imagemin-gifsicle@"^6.0.1"
         npm install -g mocha@"^3.5.3"
         npm install chai@"3.5.0" jsonschema@"^1.1.1"
         npm install convert-units@"^2.1.0"
